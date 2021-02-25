@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<Settings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Text1>This is first text</Text1>
+  <Text2>This is second text</Text2>
+  <Header>Header</Header>
+  <Footer>Footer</Footer>
+</Settings>
