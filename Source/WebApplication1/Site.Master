@@ -87,8 +87,8 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer class="ft">
-                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>
                 <asp:Label ID="LabelCounter" runat="server" Text="Counter"></asp:Label>
+                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>               
             </footer>
         </div>
 

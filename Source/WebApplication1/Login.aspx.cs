@@ -13,6 +13,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             Settings settings = (Settings)Application["Settings"];
+            LabelCounter.Text = "You are visitor No." + Application["Counter"].ToString();
             FooterLabel.Text = settings.Footer;
             headerlabel.Text = settings.Header;
         }

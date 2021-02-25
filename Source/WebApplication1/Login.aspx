@@ -68,9 +68,6 @@
    <nav class="navbar navbar-expand-lg ">
  
           <div class="collapse navbar-collapse" id="navbarNav">
-             <ul class="nav navbar-nav">
-                <li><a runat="server" href="~/">Home</a></li>
-             </ul>
              <asp:Label ID="headerlabel" runat="server" Text="Header"></asp:Label>             
           </div>
    </nav>
@@ -97,14 +94,14 @@
           </tr>
         </table>
       <asp:Button ID="Buttonsubmit" class="btn btn-primary" runat="server" Text="Submit" OnClick="Buttonsubmit_Click" /><br />
-      <asp:Label ID="LabelMessage" runat="server"  Font-Size="Large" ForeColor="Red"></asp:Label>
+      <asp:Label ID="LabelMessage" runat="server"  Font-Size="Large" ForeColor="Red" ></asp:Label>
    </form>
     
    <div class="container body-content">
             <hr />
             <footer class="ft">
-                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>
-               
+                <asp:Label ID="LabelCounter" runat="server" Text="Counter"></asp:Label>
+                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>              
             </footer>
     </div>
 </body>

@@ -11,7 +11,7 @@
         .table{
             width: 30%;
            max-width: 100%;
-           margin-bottom: 20px;
+           margin-bottom: 10px;
            margin-left: 480px;
         }
          table {
@@ -32,6 +32,7 @@
         }
         .btn{
             margin-left:640px;
+            margin-bottom:20px;
         }
         
         .collapse{
@@ -52,6 +53,10 @@
         .ftr{
             margin-left:640px;
         }
+        #LabelSave
+        {
+            margin-left:485px;
+        }
     </style>
 </head>
 <body>
@@ -66,7 +71,7 @@
         <asp:Button ID="ButtonLogout" runat="server" Text="Logout" Style="background-color: lightslategray; color: red;margin-left:1200px" OnClick="ButtonLogout_Click" />
         <h1 style="color:red;text-align:center">Admin Control Page</h1>
         
-        <div style="align-content:center;margin-top:100px">
+        <div style="align-content:center;margin-top:30px">
             
              <table class="table table-bordered border-primary" style="border:1px solid;">
                   <tbody>
@@ -84,13 +89,14 @@
                     </tr>
                     <tr>                     
                       <td>Footer</td>
-                       <td><asp:TextBox ID="TextBoxFoot" class="form-control" runat="server"></asp:TextBox></td>                    
+                       <td><asp:TextBox ID="TextBoxFoot" class="form-control" runat="server" TextMode="MultiLine"></asp:TextBox></td>                    
                     </tr>
                   </tbody>
                 </table>
             <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10" style="margin-left:auto;margin-right:auto">
-              <asp:Button ID="ButtonSave" Class="btn btn-success" runat="server" Text="Save" OnClick="ButtonSave_Click"></asp:Button>
+              <asp:Button ID="ButtonSave" Class="btn btn-success" runat="server" Text="Save" OnClick="ButtonSave_Click"></asp:Button><br />
+              <asp:Label ID="LabelSave" runat="server"  Font-Size="Large" ForeColor="Green"></asp:Label>
             </div>
           </div>
         </div>
@@ -99,8 +105,8 @@
             
             <hr />
             <footer class="ft">
-                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>
-                
+                <asp:Label ID="LabelCounter" runat="server" Text="Counter"></asp:Label>
+                <p class="ftr">&copy; <%: DateTime.Now.Year %> - <asp:Label runat="server" ID="FooterLabel" Text="KTS Infotech"></asp:Label></p>            
             </footer>
         </div>
 </body>

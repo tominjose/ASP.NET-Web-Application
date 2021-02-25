@@ -12,6 +12,7 @@ namespace WebApplication1
         protected void Page_Load(object sender, EventArgs e)
         {
             Settings settings = (Settings)Application["Settings"];
+            LabelCounter.Text = "You are visitor No." + Application["Counter"].ToString();
             FooterLabel.Text = settings.Footer;
             headerlabel.Text = settings.Header;
             
@@ -45,7 +46,7 @@ namespace WebApplication1
             settings.Header = TextBoxHeader.Text;
             Manager.SaveSettings(Server.MapPath("~/App_Data/Settings.xml"), settings);
             Application["settings"] = settings;
-            
+            LabelSave.Text = "The entered data has been saved successfully";
         }
     }
 }
